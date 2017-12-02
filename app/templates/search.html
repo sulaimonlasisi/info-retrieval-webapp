@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+	<h4>Search your favorite music lyrics!</h4>
+    <form method="POST" enctype="multipart/form-data">
+	  <p> {{ form.hidden_tag() }} </p>
+	  <p> {{ form.lyrics_snippet.label }}: {{ form.lyrics_snippet }} {{ form.new_row}}</p>
+    {% for it in form.advanced_search_form %}
+      <p> {{ form.advanced_search_form[0].artist.label }}: {{ form.advanced_search_form[0].artist }}  </p>
+      <p> {{ form.advanced_search_form[0].title.label }}: {{ form.advanced_search_form[0].title }} </p>
+      <p> {{ form.advanced_search_form[0].genre.label }}: {{ form.advanced_search_form[0].genre }}</p>    
+    {% endfor %}
+	  <p> {{ form.submit}} </p>
+	</form>
+{% endblock %}
