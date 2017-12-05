@@ -1,8 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
+  {{ pagination.info }}
+  {{ pagination.links }}
   <h4>Lyrics Search Results</h4>
   {% for result in search_result %}
     <p>  Title: {{result.Title}} - Artist: {{result.Artist}} - Genre: {{ result.Genre}} </p>
     <p> Lyrics: {{ result.Lyrics }} </p>	 
   {% endfor %}
+  {{ pagination.links }}
 {% endblock %}

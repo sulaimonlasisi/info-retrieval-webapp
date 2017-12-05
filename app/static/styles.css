@@ -18,4 +18,37 @@
 body {
 	margin: 0;
 	padding: 0;
+    display: inline;
+}
+
+.pagination-page-info {
+    padding: .6em;
+    padding-left: 0;
+    width: 100%;
+    margin: .5em;
+    margin-left: 0;
+    font-size: 12px;
+    display: inline;
+}
+.pagination-page-info b {
+    color: black;
+    width: 100%;
+    background: #6aa6ed;
+    padding-left: 2px;
+    padding: .1em .25em;
+    font-size: 150%;
+    display: inline;
+}
+.pagination{
+    display: inline;
+    width: 100%;
+}
+
+ul {
+    display: inline-block;
+    width: 100%;
+}
+
+li { 
+    display: inline; 
 }

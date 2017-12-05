@@ -27,5 +27,8 @@ def search(query_dict):
   		  else:
   		    query_string = query_string+key+':'+query_dict[key]
   		  item_count +=1
-  res = solr.query('lyrics',{ 'q':query_string, })
-  return res.data['response']['docs']
+  docs_list = []
+  for res in solr.paging_query('lyrics',{ 'q':query_string, }, rows = 200, start = 0, max_start = 1000):
+    for doc in res.data['response']['docs']:
+      docs_list.append(doc)
+  return docs_list
